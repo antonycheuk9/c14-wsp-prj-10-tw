@@ -1,0 +1,176 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;   
+
+}
+
+.navbar,.dropdown-menu,.nav-item{
+    background-color: #210321;
+}
+
+.navbar {
+    height: 57px;
+    padding-top: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.brand-name{
+    letter-spacing: 1px;
+}
+
+.brand-name, .nav-name{
+    font-size: 20px;
+}
+
+.nav-item{
+    margin-right: 60px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.nav-link{
+    border-top: transparent solid 5px;
+}
+
+.nav-link:hover{
+    border-top: #5639e1 solid 5px;
+}
+
+
+.dropdown-item:hover{
+    background-color: ;
+}
+
+
+a:hover {
+    color: rgb(31, 4, 36);
+}
+.subNav {
+    margin-top: 56px;
+    background: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+
+}
+.subNavBtn {
+    margin: 3px 10px;
+    padding: 5px;
+    font-size: 14px;
+    color: rgb(31, 4, 36);
+    border-top: 3px solid rgb(234, 234, 234);
+}
+.subNavBtn:hover {
+    border-top: solid #5637ee 2px;
+}
+.article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1020px;
+}
+.articleTitle {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+.dateAndAuthor {
+    color: rgb(202, 202, 202);
+    margin: 0;
+    padding: 0;
+}
+.articleBody p {
+    margin-top: 30px;
+}
+.footer {
+    margin-top: 30px;
+    background: rgb(31,4,36);
+}
+.footer div  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.relatedArticles {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.linksHeader {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(31,4, 36);
+}
+.linkThumbnail img {
+    width: 136px;
+    height: 120px;
+}
+.linkCard {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 30%)
+}
+.linkText {
+    align-self: center;
+    margin-left: 20px;
+}
+.linkTitle {
+    margin-bottom: 10px;
+}
+
+.footer-links,.footer{
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-links {
+    background-color: #301031;
+    height: 500px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .logo-link {
+    margin-top: 70px;
+    margin-left: auto;
+    width: fit-content;
+  }
+  
+  
+  .small-name {
+    color: #797979;
+  }
+  
+  
+  .footer-links ul {
+    border-left: #492948 solid 1px;
+    padding-left: 15px;
+  }
+  
+  .footer-links li {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+      text-decoration: none;
+      font-size: 20px;
+   }
+  
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media {
+    color: #ffffff;
+    margin-left: 6px;
+  }
+  
+  
+  .social-media i:hover {
+    color: #ebebeb;
+  }
+  
+  .footer {
+    background-color: #210321;
+    padding: 25px 0;
+  }

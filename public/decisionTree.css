@@ -1,0 +1,133 @@
+#startDiagnosisPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#startDiagnosisPanel p {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+#startDiagnosisBtn {
+    width: fit-content;
+    padding: 20px 30px;
+    background: rgb(255,255,255,0.9);
+    border-radius: 30px;
+    border: 0;
+    font-weight: bold;
+}
+
+#startDiagnosisPanel button:hover {
+    background: rgb(255,255,255);
+    color: rgb(46, 16, 53);
+}
+
+#decision-form {
+    margin: 30px;
+}
+
+#formContainer {
+    padding: 30px 50px;
+    background: rgb(255,255,255,0.85);
+    border-radius: 100px;
+    max-width: 900px;
+    min-width: 600px;
+}
+
+#questionContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#questionShowLabel {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#choicesContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#stepsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#stepsContainer button {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    color: rgb(30, 4, 36);
+}
+
+#resultContainer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultContainer h1 {
+    font-weight: bold;
+}
+
+#resultContainer h1 a {
+    color: rgb(46, 16, 53);
+}
+
+#resultContainer h1 a:hover {
+    color: #0d6efd;
+}
+
+#resultContainer p {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+#resultContainer p, #resultContainer h1, #resultContainer h3 {
+    text-align: center;
+}
+
+#resultContainer button{
+    margin-top: 10px;
+}
+
+#resetBtn {
+    border-radius: 30px;
+    background: rgb(30, 4, 36);
+    border: 0;
+}
+
+#signUpBtn {
+    padding: .375rem .75rem;
+    border-radius: 30px;
+    border: 0;
+    background: rgb(30, 4, 36);
+}
+
+#signUpBtn a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#signUpBtn:hover a {
+    color: rgb(46, 16, 53);;
+}
+
+#saveMedLogBtn {
+    border-radius: 30px;
+    background: rgb(30, 4, 36);
+    border: 0;
+}

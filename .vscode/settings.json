@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "c14_wsp_prj_10_tw",
+            "database": "c14_wsp_prj_10_tw",
+            "username": "kent"
+        }
+    ]
+}

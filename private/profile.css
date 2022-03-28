@@ -1,0 +1,65 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;    
+}
+
+.navbar {
+    height: 57px;
+    background-color: #210321;
+    padding-top: 0px;
+    font-family: 'F37 Ginger';
+}
+
+.dropdown-menu{
+    background-color: #210321;
+}
+.nav-link{
+    border-top: transparent solid 5px;
+}
+
+.nav-link:hover{
+    border-top: #5639E1 solid 5px;
+    
+}
+
+
+.dropdown-item:hover{
+    background-color: #5639E1;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #ffffff;
+}
+
+.user-Info{
+    padding: 10px;
+}
+
+ .log-box{
+    width: 800px;
+    height: 350px;
+    border: 1px black solid;
+
+} 
+
+.blog-box{
+    width: 800px;
+    height: 220px;
+    border: 1px black solid;
+}
+
+.text-edit{
+    width: 100%;
+    min-height: 30vh;
+    border:2px black solid;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+
+.comment{
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
+}

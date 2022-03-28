@@ -1,0 +1,15 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;    
+}
+
+.navbar, .dropdown-menu, .our-content, .join-content, .footer{
+    background-color: #210425;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #ffffff;
+}
+
+.dropdown-item:hover{
+    background-color: #611b6d;
+}

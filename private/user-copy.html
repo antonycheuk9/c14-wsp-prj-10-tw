@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="userProfile.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./mainpage.html">
+                    <img src="../public/images/P_logo3.png" alt="" width="30" height="30">
+                    <span class="brand-name">Physio-pedia</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav w-100 justify-content-center nav-name">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../public/mainpage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../public/aboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Content</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item text-light" href="#">Categories</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-white">
+                                </li>
+                                <li><a class="dropdown-item text-light" href="#">Blog and Feature Articles</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../public/contribute.html">Contribute</a>
+                        </li>
+                        <li class="nav-item">
+                            <div action='/logOut' method="GET" id="logoutBtn" onclick="logOut()"><a
+                                    class="nav-link me-5" href="login-page.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- User Info Box-->
+    <div class="whole-box">
+        <div class="row">
+            <div col-12>
+                <div class="info-container">
+                    <div class="row">
+                        <!-- user photo -->
+                        <div class="d-flex justify-content-center">
+                            <form action="/profile-picture" name="image" id="profile-picture" method="POST"
+                                enctype="multipart/form-data">
+                                <div class=" align-items-end">
+                                    <img id="image-out" src="" alt="..." width="230" height="200" class="img-thumbnail">
+                                </div>
+                                <input id="image-input" type="file" name="image" hidden />
+                                <label for="image-input" class="btn btn-dark file-button mt-0">Edit Photo</label>
+                            </form>
+                        </div>
+                        <!-- User Info -->
+
+                        <div action=" /member-user" id="welcomeusername" class="text-center text-black" method="POST">
+                            <h1>Welcome Username</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- select bar  -->
+                <div class="col-12 d-flex justify-content-center">
+
+                    <div onclick="popup()" class=" btn btn-dark m-1" id=" image-ingitput">My Profile</div>
+                    <div onclick="popup()" class=" btn btn-dark m-1" id=" image-ingitput">My Diagnosis</div>
+                    <div onclick="popup()" class=" btn btn-dark m-1" id=" image-ingitput">Seek Advice</div>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <hr size="8" width="90%" color="grey">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-lg-4 mb-4">
+                            <form action="/editInfo" name="memberInfo" id="memberinfo" method="POST">
+                                <div class="info-box m-0">
+                                    <div class="topic">
+                                        <h4 p-0> Personal Information</h4>
+                                    </div>
+                                    <div action="/userInfo" method="POST" id="userInfo">
+                                        <div>Name: </div>
+                                        <div>Email: </div>
+                                        <div>Tel: </div>
+                                        <div>Qualification: </div>
+                                        <div>Occupation: </div>
+                                    </div>
+                                    <div onclick="openForm()" class=" btn btn-dark m-1" id=" image-ingitput"><i
+                                            class="fas fa-user-edit pr-2"></i>My Profile
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-7 d-flex justify-content-center mb-4">
+                            <div class="limiter">
+                                <div class="container-table100">
+                                    <div class="wrap-table100">
+                                        <div class="table100">
+                                            <div class='light x1'></div>
+                                            <div class='light x2'></div>
+                                            <div class='light x3'></div>
+                                            <div class='light x4'></div>
+                                            <div class='light x5'></div>
+                                            <div class='light x6'></div>
+                                            <div class='light x7'></div>
+                                            <div class='light x8'></div>
+                                            <div class='light x9'></div>
+                                            <table class>
+                                                <thead>
+                                                    <tr class="med-log">
+                                                        <th colspan="4" class="text-center">Med Log</th>
+                                                    </tr>
+
+                                                    <tr class="table100-head">
+                                                        <th class="column1">Date</th>
+                                                        <th class="column2">Pain Syndrome</th>
+                                                        <th class="column3">Affected Area</th>
+                                                        <th class="column4">Injury</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="column1">2021-04-11</td>
+                                                        <td class="column2">foot pain</td>
+                                                        <td class="column3">Upper limb</td>
+                                                        <td class="column4">(ACL) Injury</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="column1">2021-04-11</td>
+                                                        <td class="column2">foot pain</td>
+                                                        <td class="column3">Upper limb</td>
+                                                        <td class="column4">(ACL) Injury</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="column1">2021-04-11</td>
+                                                        <td class="column2">foot pain</td>
+                                                        <td class="column3">Upper limb</td>
+                                                        <td class="column4">(ACL) Injury</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- edit info function -->
+                <form action="/editInfo" name="memberInfo" id="memberinfo" method="POST">
+                    <div id="editForm">
+                        <div class="form-container">
+                            <h2 class="text-center">Information Update</h2>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="first_name">First Name: </label>
+                                    </td>
+                                    <td>
+                                        <input id="first_name" name="first_name" type="text" size="28" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="last_name">Last Name: </label>
+                                    </td>
+                                    <td>
+                                        <input id="last_name" name="last_name" type="text" size="28" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="password">Reset Password: </label>
+                                    </td>
+                                    <td>
+                                        <input id="password" name="password" type="text" size="28" required />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phone_number">Tel: </label>
+                                    </td>
+                                    <td>
+                                        <input id="phone_number" name="phone_number" size="28" type="tel"
+                                            placeholder="9876 5432" maxlength=8 />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="occupation">Occupation: </label>
+                                    </td>
+                                    <td>
+                                        <input id="occupation" name="occupation" size="28" type="text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for=" qualification">Qualification: </label>
+                                    </td>
+                                    <td>
+                                        <input id="qualification" name="qualification" size="28" type="text">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class=" d-flex">
+                                <input type="submit" value="Submit"></input>
+                                <input type="button" name="cancel" id="cancel" value="Cancel" onclick="closeForm()" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- diagnosis -->
+        <div id="disagnosis-box">
+            <div id="my-diagnosis" class="container tabContent">
+                <div class="col-md-2 mx-auto mt-3">
+                    <form action="/decision" method="POST" id="decision-form">
+                        <div id="formContainer">
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label" id="questionShowLabel">Where
+                                    is
+                                    your
+                                    pain?</label>
+                            </div>
+                            <div class="mb-3" id="choicesContainer">
+                                <input type="radio" name="userInput" value="Upper limb"><label for="Upper limb">Upper
+                                    limb</label>
+                                <input type="radio" name="userInput" value="Lower limb"><label for="Lower limb">Lower
+                                    limb</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                    <input type="button" onclick="goBack()" id="backBtn" value="BACK" style="display: none">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+        <!-- bootstrap -->
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="./m1.js"></script>
+
+        <script src="userProfile.js"></script>
+</body>
+
+</html>
